@@ -1,0 +1,30 @@
+.annual-party-card {
+  background-image: url("../public/party.jpg");
+}
+/* Default styles for large screens */
+
+/* Laptop and larger screens */
+@media (min-width: 1200px) {
+  .annual-party-card {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+/* Tablet screens */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .annual-party-card {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .annual-party-card {
+    width: 250px;
+    height: 350px;
+  }
+}
+
+/* The rest of the styling remains the same as in RestaurantCard.css */

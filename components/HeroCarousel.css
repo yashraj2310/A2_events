@@ -1,0 +1,150 @@
+/* Hero Carousel Container */
+.hero-carousel {
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: white;
+  margin-left: 160px; /* Sidebar width offset for main layout */
+}
+.buy-tickets-button:hover {
+  background-color: #005bb5; /* Darker shade of blue */
+  transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+.carousel-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #00c6ff;
+}
+
+/* Swiper container */
+.mySwiper {
+  width: calc(100% - 160px); /* Offset Swiper to account for sidebar */
+  height: 80vh;
+}
+
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image Styling */
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay Styling */
+.overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 50%;
+  text-align: left;
+  color: #fff;
+}
+
+.overlay h3 {
+  font-size: 1.8rem;
+  color: #00c6ff;
+  margin-bottom: 0.5rem;
+}
+
+.overlay p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.buy-tickets-button {
+  background-color: #00c6ff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Navigation and Pagination */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #00c6ff;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1920px) {
+  .overlay {
+    width: 40%;
+  }
+
+  .carousel-heading {
+    font-size: 3rem;
+  }
+  .mySwiper {
+    width: calc(100% - 740px);
+    height: 70vh;
+  }
+  .hero-carousel {
+    margin-left: -210px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+  .overlay {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .hero-carousel {
+    margin-left: 120px;
+  }
+
+  .mySwiper {
+    width: calc(100% - 120px);
+    height: 70vh;
+  }
+
+  .overlay {
+    width: 70%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-carousel {
+    margin-left: 0;
+  }
+
+  .mySwiper {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .overlay {
+    width: 90%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .overlay h3 {
+    font-size: 1.4rem;
+  }
+
+  .overlay p {
+    font-size: 0.85rem;
+  }
+
+  .buy-tickets-button {
+    font-size: 0.85rem;
+  }
+}

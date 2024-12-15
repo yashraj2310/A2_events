@@ -1,0 +1,123 @@
+.header-container {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for readability */
+  background-image: url("/banner1.jpg"); /* Replace with the path to your background image */
+  background-size: cover;
+  background-position: center;
+  margin-left: 160px; /* Sidebar offset for desktop view */
+}
+
+.header-content {
+  text-align: center;
+  padding: 0 1rem;
+  max-width: 80%; /* Ensures it doesn’t overflow on smaller screens */
+}
+
+.header-logo {
+  width: 300px; /* Default size for the logo */
+  max-width: 100%;
+  height: auto;
+}
+
+.header-subtitle {
+  font-size: 2.2rem;
+  color: #ddd;
+  margin-top: 1rem;
+}
+
+/* Keyframes for the animation */
+.leBlurIn span {
+  animation-name: leBlurIn;
+}
+
+@keyframes leBlurIn {
+  from {
+    transform: scaleX(0.2);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .header-container {
+    margin-left: 140px;
+  }
+
+  .header-subtitle {
+    font-size: 1.8rem;
+  }
+
+  .header-logo {
+    width: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-container {
+    margin-left: 120px;
+  }
+
+  .header-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .header-logo {
+    width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    margin-left: 100px;
+    justify-content: flex-start;
+  }
+
+  .header-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .header-logo {
+    width: 140px;
+  }
+  .header-content {
+    padding-left: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-container {
+    margin-left: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: flex-start;
+  }
+
+  .header-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .header-logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-container {
+    margin-left: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: flex-start;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+  }
+
+  .header-logo {
+    width: 100px;
+  }
+}

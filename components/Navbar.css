@@ -1,0 +1,154 @@
+/* Sidebar Navbar Styles */
+.sidebar-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 140px;
+  background-color: rgba(30, 30, 30, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+  z-index: 2;
+  transition: width 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.logo-image {
+  width: 125px;
+}
+
+.sidebar-navbar:hover {
+  width: 180px;
+  background-color: rgba(30, 30, 30, 0.5);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Sidebar Logo Styling */
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+.logo-image {
+  width: 280px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* Sidebar Menu Styling */
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar-item {
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem 0;
+  position: relative;
+}
+
+.sidebar-icon {
+  color: #b0b0b0;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar-label {
+  display: none;
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar-navbar:hover .sidebar-label {
+  display: inline-block;
+}
+
+/* Sidebar Link Styling */
+.sidebar-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b0b0b0;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-navbar:hover .sidebar-item a {
+  justify-content: flex-start;
+  padding-left: 1.2rem;
+}
+
+.sidebar-item a:hover {
+  background-color: #333333;
+}
+
+.sidebar-item a:hover .sidebar-icon,
+.sidebar-item a:hover .sidebar-label {
+  color: #00c6ff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar-navbar {
+    width: 100px;
+  }
+
+  .sidebar-navbar:hover {
+    width: 140px;
+  }
+
+  .logo-image {
+    width: 60px;
+  }
+
+  .sidebar-logo {
+    font-size: 1.2rem;
+  }
+
+  .sidebar-icon {
+    font-size: 1.2rem;
+  }
+
+  .sidebar-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar-navbar {
+    width: 80px;
+  }
+
+  .sidebar-navbar:hover {
+    width: 120px;
+  }
+
+  .logo-image {
+    width: 50px;
+  }
+
+  .sidebar-icon {
+    font-size: 1.1rem;
+  }
+
+  .sidebar-label {
+    font-size: 0.75rem;
+  }
+}
+
+/* Hide Class */
+.sidebar-navbar.hide {
+  display: none !important;
+}

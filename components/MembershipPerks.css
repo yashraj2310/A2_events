@@ -1,0 +1,155 @@
+.membership-perks-section {
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+  margin-top: 5.5rem;
+  margin-bottom: 5.5rem;
+  margin-left: 160px; /* Sidebar offset */
+}
+
+.membership-perks-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00c6ff;
+  margin-bottom: 1.5rem;
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-arrow {
+  background: none;
+  border: none;
+  color: #00c6ff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.nav-arrow:hover {
+  transform: scale(1.1);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 16px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.perk-card {
+  flex: 0 0 calc((100% - (16px * 3)) / 4); /* Default for large screens */
+  height: 410px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perk-card:hover {
+  transform: scale(1.1);
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  transition: filter 0.3s ease;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Large screens */
+@media (min-width: 1920px) {
+  .perk-card {
+    flex: 0 0 calc((100% - (90px * 3)) / 4); /* Four cards visible */
+  }
+  .cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    overflow: hidden;
+    width: 57%;
+  }
+  .navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .membership-perks-section {
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
+    margin-left: -200px;
+  }
+}
+
+/* Medium-large screens */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .perk-card {
+    flex: 0 0 calc((100% - (69px * 2)) / 3); /* Three cards visible */
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .membership-perks-section {
+    margin-left: 140px;
+  }
+
+  .perk-card {
+    flex: 0 0 calc((100% - 67px) / 2); /* Two cards visible */
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .membership-perks-section {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .perk-card {
+    flex: 0 0 100%; /* One card visible */
+  }
+
+  .membership-perks-title {
+    font-size: 1.5rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}

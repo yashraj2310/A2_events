@@ -1,0 +1,85 @@
+.membership-section {
+  padding: 2rem 0;
+  text-align: center;
+  margin-left: 160px; /* Adjusted for sidebar in default view */
+}
+
+.membership-section-title {
+  font-size: 2.5rem;
+  color: #00c6ff;
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Large screens */
+@media (min-width: 1920px) {
+  .membership-section {
+    margin-left: 180px; /* Increased left margin for larger sidebar */
+    padding: 3rem 2rem; /* Added extra padding for larger screens */
+  }
+
+  .membership-section-title {
+    font-size: 3rem; /* Larger title for big screens */
+  }
+
+  .card-grid {
+    gap: 2rem; /* Increased gap for spacing */
+  }
+}
+
+/* Medium-large screens */
+@media (min-width: 1200px) and (max-width: 1920px) {
+  .membership-section {
+    margin-left: 160px;
+    padding: 2.5rem 1.5rem; /* Adjust padding for medium-large screens */
+  }
+
+  .membership-section-title {
+    font-size: 2.5rem;
+  }
+
+  .card-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .membership-section {
+    margin-left: 140px;
+    padding: 2rem 1rem; /* Reduced padding for medium screens */
+  }
+
+  .membership-section-title {
+    font-size: 2rem; /* Slightly smaller title */
+    margin-bottom: 1.5rem;
+  }
+
+  .card-grid {
+    gap: 1rem;
+  }
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .membership-section {
+    margin-left: 0; /* Remove margin for mobile view */
+    padding: 1.5rem 1rem; /* Compact padding for smaller screens */
+  }
+
+  .membership-section-title {
+    font-size: 1.8rem; /* Smaller title for mobile */
+    margin-bottom: 1.8rem;
+  }
+
+  .card-grid {
+    gap: 2.8rem;
+    margin-left: -7rem;
+  }
+}

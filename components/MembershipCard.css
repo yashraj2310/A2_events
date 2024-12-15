@@ -1,0 +1,210 @@
+.membership-card {
+  width: 410px; /* Default size */
+  height: 517px; /* Default size */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.membership-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.card-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #00c6ff;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00c6ff;
+  margin: 0.5rem 0;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 1rem;
+}
+
+.card-button {
+  background-color: #00c6ff;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #0072ff;
+}
+
+/* Large screens (1920px and larger) */
+@media (min-width: 1920px) {
+  .membership-card {
+    width: 320px; /* Larger cards for wider screens */
+    height: 450px;
+  }
+  .membership-section {
+    margin-left: -135px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.6rem; /* Increased text size */
+  }
+
+  .card-price {
+    font-size: 2.2rem;
+  }
+
+  .card-description {
+    font-size: 1.1rem;
+  }
+
+  .card-button {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Medium-large screens (1200px to 1920px) */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .membership-card {
+    width: 320px;
+    height: 400px;
+  }
+  .membership-section {
+    margin-left: 145px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-price {
+    font-size: 2rem;
+  }
+
+  .card-description {
+    font-size: 1rem;
+  }
+
+  .card-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Medium screens (768px to 1200px) */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .membership-card {
+    width: 350px;
+    height: 450px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-price {
+    font-size: 1.8rem;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+
+  .card-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Small screens (below 768px) */
+@media (max-width: 768px) {
+  .membership-card {
+    width: 300px;
+    height: 400px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-price {
+    font-size: 1.5rem;
+  }
+
+  .card-description {
+    font-size: 0.8rem;
+  }
+
+  .card-button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Extra small screens (below 600px) */
+@media (max-width: 600px) {
+  .membership-card {
+    width: 250px;
+    height: 350px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-price {
+    font-size: 1.2rem;
+  }
+
+  .card-description {
+    font-size: 0.7rem;
+  }
+
+  .card-button {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .card-grid {
+    gap: 2.8rem;
+    margin-left: 2rem;
+  }
+  .membership-section-title {
+    margin-left: 2rem;
+  }
+  .membership-section {
+    margin-left: -1.3rem;
+    padding: 2.5rem 1.5rem;
+  }
+}

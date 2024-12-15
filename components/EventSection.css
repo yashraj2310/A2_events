@@ -1,0 +1,71 @@
+.event-section {
+  padding: 2rem 0;
+  text-align: center;
+  margin-left: 160px; /* Default sidebar offset */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #00c6ff;
+  margin-bottom: 1.5rem;
+}
+
+.card-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Laptop and larger screens */
+@media (min-width: 1200px) {
+  .event-section {
+    margin-left: 8.5rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .card-grid {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1920px) {
+  .event-section {
+    margin-left: -18.5rem;
+  }
+}
+
+/* Tablet screens */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .event-section {
+    margin-left: 6.5rem; /* Adjusted for smaller sidebar width */
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .card-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .event-section {
+    margin-left: 0.5rem; /* Remove large margin for mobile */
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-left: 1.7rem;
+  }
+
+  .card-grid {
+    gap: 1rem;
+  }
+}
